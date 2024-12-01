@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Policy</title>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    
+    <style>
+        body {
+            /* font-family: Arial, sans-serif; */
+            font-family: 'Quicksand';
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #b974df;
+        }
+
+        p {
+            margin: 0 0 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        li{
+                font-size: 16px;
+                padding: 4px;
+            }
+
+        /* Media Queries for responsive design */
+        @media (max-width: 600px) {
+            .container {
+                width: 88%;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2, h3 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+                text-align: justify;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            li{
+                font-size: 14px;
+                padding: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Return Policy</h1>
+        <p style="color: blue;">Last Updated as of   7 June 2024</p>
+        <p>At HumanDesire, we want you to be completely satisfied with your purchase. If you are not happy with your order, we offer a straightforward return policy to make the process as smooth as possible..</p>
+
+        <h2>1. Eligibility for Returns</h2>
+        <ul>
+          <li>Time Frame: You have [7] days from the date you receive your order to initiate a return </li>
+          <li>Condition: Items must be returned in their original condition, unworn, unwashed, and with all tags attached. Items that are damaged, soiled, or altered may not be accepted.</li>
+          <li>Non-Returnable Items: Certain items are non-returnable, including:Final sale items, Gift cards, Underwear and swimwear (for hygiene reasons), Customized or personalized items. </li>
+      </ul>
+        <h2>2. How to Initiate a Return</h2>
+        <ul>
+            <li>Contact Us: Email our customer service team at humandesire@gmail.com with your order number and the reason for your return. </li>
+            <li>Receive Authorization: Once your return request is approved, you will receive a return authorization number and further instructions.</li>
+            <li>Package Your Return: Securely package the items you wish to return, including all original packaging materials. Clearly mark the return authorization number on the outside of the package. </li>
+            <li>Ship the Return: Send the package to the return address provided by our customer service team. We recommend using a trackable shipping service to ensure your return is received.</li>
+        </ul>
+
+        <h2>3. Return Shipping Cost'</h2>
+
+        <ul>
+          <li>Customer Responsibility: You are responsible for paying the return shipping costs unless the return is due to a mistake on our part (e.g., wrong item sent, defective product). </li>
+          <li>Original Shipping Fees: Original shipping fees are non-refundable, except in cases where we have made an error with your order..</li>
+      </ul>
+      <h2>4. Join Our Community'</h2>
+      <ul>
+        <li>Processing Time: Once we receive your return, please allow [7-10] business days for processing. You will receive an email notification once your return has been processed </li>
+        <li>Refund Method: Refunds will be issued to the original payment method used for the purchase. Please note that it may take additional time for your bank or credit card company to process and post the refund.</li>
+        <li>Partial Refunds: If items are returned damaged or not in their original condition, only partial refunds may be granted at our discretion. </li>
+        <li>Ship the Return: Send the package to the return address provided by our customer service team. We recommend using a trackable shipping service to ensure your return is received.</li>
+    </ul>
+        <h2>5. Exchanges</h2>
+       <ul>
+          <li>Exchange Process: If you would like to exchange an item, please follow the return process and place a new order for the desired item. This ensures that the item you want is in stock and reserved for you.  </li>
+          <li>Exchange Shipping Costs: You are responsible for shipping costs for both the return and the new order, except in cases of defective or incorrect items sent by us.</li>
+      </ul>
+        <h2>6. Contact Us</h2>
+        <p>If you have any questions about this Return Policy, please contact us..</p>
+
+        <p>
+            Human Desire<br>
+            Sinza Mugabe<br>
+            Dar es Salaam<br>
+            <a href="contact@humandesiretz.com" style="text-decoration: none;">contact@humandesiretz.com</a><br>
+            <a href="tel" style="text-decoration: none;">Phone: +255742 779 292</a>
+        </p>
+    </div>
+
+    <div class="footer">
+        Copyright&copy;2024-HumanDesire
+    </div>
+</body>
+
+</html>
+
+              <!-- fontWeight: FontWeight.bold, color: kprimarycolor))),
+        body: Consumer<CartProvider>(builder: (context, cartProvider, child) {
+          if (cartProvider.isEmpty) {
+            return emptyPage();
+          } else {
+            return ListView.builder(
+               itemCount: context.read<UserProvider>().cart.length,//context.watch<CartProvider>().items.length,
+              itemBuilder: (BuildContext context, int index) {
+                var pr = context.watch<CartProvider>().items[index];
+                return Slidable(
+                  key: const ValueKey(0),
+                  endActionPane: ActionPane(
+                      dismissible: DismissiblePane(
+                        onDismissed: () {
+                          // context.read<CartProvider>().items.removeAt(index);
+                          // context.read<CartProvider>().userNotify();
+                        },
+                      ),
+                      motion: const DrawerMotion(),
+                      children: [
+                        SlidableAction(
+                          autoClose: true,
+                          flex: 1,
+                          onPressed: (value) {
+                            // context.read<CartProvider>().items.removeAt(index);
+                            // context.read<CartProvider>().userNotify();
+                          },
+
+                          Text(
+                            '${pr.quantity}',
+                            style: const TextStyle(fontSize: 16),
+                          ),
+                          IconButton(
+                            icon: CircleAvatar(
+                                radius: 12,
+                                child: const Icon(Icons.add,
+                                    size: 17)),
+                            onPressed: () {
+                              context
+                                  .read<CartProvider>()
+                                  .items[index]
+                                  .quantity++;
+                              context
+
+                              Text(
+                                '$quantity',
+                                style: const TextStyle(fontSize: 16),
+                              ),
+                              IconButton(
+                                icon: CircleAvatar(
+                                    radius: 12,
+                                    child: const Icon(Icons.add,
+                                        size: 17)),
+                                onPressed: () {
+                                  context
+                                      .read<CartProvider>()
+                                      .items[index]
+                                      .quantity++;
+                                  context
+                                      .read<CartProvider>()
+                                      .userNotify();
+                                },
+                              ), -->
+                              <!-- // if (response.documents.isNotEmpty) {
+                                //      int qty = response.documents[0].data['quantity'];
+                                //     int qty2 = qty + qty;
+                                //     await Databases(client).updateDocument(
+                                //       databaseId: 'humanDesire',
+                                //       collectionId: 'cart',
+                                //       documentId: response.documents[0].$id,
+                                //       data: {
+                                //         'quantity': qty2,
+                                //       },
+                                //     );
+                                // } -->

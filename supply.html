@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive and Animated Containers</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #fff;
+            flex-wrap: wrap; /* Allow stacking for small screens */
+            overflow: hidden;
+        }
+
+        .left-container {
+            width: 40%;
+            position: relative;
+            z-index: 2;
+            margin-right: -80px;
+            animation: slideInLeft 1s ease-out; /* Slide-in animation */
+        }
+
+        .left-container img {
+            width: 100%;
+            height: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .right-container {
+            width: 50%;
+            background-color: #e5097f;
+            color: #fff;
+            padding: 40px;
+            padding-left: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+            animation: slideInRight 1s ease-out; /* Slide-in animation */
+        }
+
+        .right-container h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, orange, purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .right-container p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .right-container ul {
+            list-style: none;
+        }
+
+        .right-container ul li {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack containers vertically */
+                height: auto; /* Adjust height for vertical stacking */
+            }
+
+            .left-container,
+            .right-container {
+                width: 100%;
+                animation: slideInLeft 2s ease-out;
+                /* animation: fadeIn 1s ease-out;  */
+            }
+
+            .left-container {
+                width: 100%;
+                /* margin-bottom: 20px; */
+                animation: slideInLeft 1s ease-out;  /* Add spacing between the containers */
+            }
+        }
+
+        /* Animations */
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Container -->
+        <div class="left-container">
+            <img src="assets/img/image14.jpeg" alt="Placeholder Image">
+        </div>
+
+        <!-- Right Container -->
+        <div class="right-container">
+            <h1>A MALL AND MORE</h1>
+            <p>
+                The Lazada lifestyle redefines the boundaries of retail, delivering engaging and entertaining experiences customized to each of our markets. Discover the world at your fingertips on Lazada.
+            </p>
+            <ul>
+                <li>INDONESIA</li>
+                <li>MALAYSIA</li>
+                <li>SINGAPORE</li>
+                <li>VIETNAM</li>
+                <li>THAILAND</li>
+                <li>THE PHILIPPINES</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Left Container -->
+        <div class="left-container">
+            <img src="assets/img/image14.jpeg" alt="Placeholder Image">
+        </div>
+
+        <!-- Right Container -->
+        <div class="right-container">
+            <h1>A MALL AND MORE</h1>
+            <p>
+                The Lazada lifestyle redefines the boundaries of retail, delivering engaging and entertaining experiences customized to each of our markets. Discover the world at your fingertips on Lazada.
+            </p>
+            <ul>
+                <li>INDONESIA</li>
+                <li>MALAYSIA</li>
+                <li>SINGAPORE</li>
+                <li>VIETNAM</li>
+                <li>THAILAND</li>
+                <li>THE PHILIPPINES</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

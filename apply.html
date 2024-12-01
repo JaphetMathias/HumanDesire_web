@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApplyPage</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            nav ul li {
+                margin: 0;
+            }
+            nav ul li a {
+                text-align: center;
+                padding: 10px;
+                border-top: 1px solid #575757;
+                border-bottom: 1px solid #575757;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        .active {
+            display: flex !important;
+            flex-direction: column;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form select, form input[type="text"], form input[type="number"], form input[type="submit"] {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            background-image: linear-gradient(135deg, #6e8efb, #a777e3);
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background-image: linear-gradient(135deg, #a777e3, #6e8efb);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .feedback {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: #ffffff6b;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer .footer-content .social-media {
+            margin: 10px 0;
+        }
+
+        footer .footer-content .social-media a {
+            color: #49a8c0;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+
+        footer .footer-content .social-media a:hover {
+            color: #141128;
+        }
+
+        footer .footer-content .contact-info {
+            margin: 2px 0;
+        }
+
+        footer .footer-content .contact-info p {
+            margin: 5px 0;
+        }
+
+        footer .footer-content .copyright {
+            margin: 5px 0;
+        }
+
+        .section-content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        .section-content h1, .section-content h2 {
+            color: #333;
+        }
+
+        .section-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+        #box-colorrrr {
+  width: 100%;
+  height: 320px;
+  background: #b974df;
+}
+    </style>
+</head>
+<body>
+    <header style="display: flex; justify-content: space-between; padding-right: 4px;">
+        <img src="assets/img/hdnew22.png" style="width: 100px;" alt="">
+        <a href="sellhd.html"><img src="assets/img/goo.png" style="width: 120px;" alt=""></a>
+    </header>
+    <section>
+        <div>
+            <h2 class="text-center" style="font-weight: bold;color: #0a2472;">Sign up to sell on <br> HumanDesire&nbsp;</h2>
+            <p id="parasell" style="color: #0a2472;text-align: center;">We are looking for Tanzania brands and seller who share our passion for delivering quality products and exceptional customer experience. If that sound like you, we'd love for you to apply</p>
+        </div>
+        <main>
+            <div class="section-content">
+                <form id="courseForm" name="apply_to_sell" method="POST" action="apply.php">
+                    <label for="first_name">FirstName:</label>
+                    <input type="text" id="first_name" name="first_name" required maxlength="30">
+                    <label for="last_name">LastName:</label>
+                    <input type="text" id="last_name" name="last_name" required maxlength="30">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required maxlength="30">
+                    <label for="phone_number">Phone Number:</label>
+                    <input type="text" id="phone_number" name="phone_number" required maxlength="30">
+                    <label for="region">Region:</label>
+                    <select id="region" name="region" required>
+                        <option value="" disabled selected>Select Region</option>
+                        <option value="Dar es Salaam">Dar es Salaam</option>
+                    </select>
+                    <label for="district">District:</label>
+                    <select id="district" name="district" required>
+                        <option value="" disabled selected>Select District</option>
+                        <option value="Ubungo">Ubungo</option>
+                        <option value="Kinondoni">Kinondoni</option>
+                        <option value="Ilala">Ilala</option>
+                        <option value="Temeke">Temeke</option>
+                        <option value="Kigamboni">Kigamboni</option>
+                    </select>
+                    <label for="street">Street:</label>
+                    <input type="text" id="street" name="street" required maxlength="30">
+                    <label for="company_name">Company Name:</label>
+                    <input type="text" id="company_name" name="company_name" required maxlength="30">
+                    <label for="instagram">Instagram Profile:</label>
+                    <input type="text" id="instagram" name="instagram" required maxlength="30">
+                    <label for="categoryy">What is the main product category that you sell:</label>
+                    <select id="categoryy" name="categoryy" required>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="">Mans Clothes & accessories</option>
+                        <option value="">Women Clothes & accessories</option>
+                        <option value="">Kids Clothes & accessories</option>
+                        <option value="">Mens Shoes</option>
+                        <option value="">Women Shoes</option>
+                        <option value="">Kids Shoes</option>
+                        <option value="">Bag and Laggage</option>
+                    </select>
+                    <label for="business">Tell us about your business:</label>
+                    <input type="text" id="business" name="business" required maxlength="300">
+                    <div class="error" id="emailError"></div>
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="feedback" class="feedback"></div>
+            </div>
+        </main>
+        <div id="box-colorrrr" style="text-align: center;">
+            <br><br>
+            <h3 style="color: white; font-weight: 700;">Get ready to shine on <br> HumanDesire!</h3>
+
+            <img src="assets/img/hd tablet.png" alt="" width="330px">
+        </div>
+        <br><br>
+        <p id="parasell" style="color: #0a2472;text-align: center;">After application, you will have to wait for 7 days (week) for confirmation and we will visit you more information <br> within those days <br> Thanks!</p>
+        <br><br>
+        <footer>
+            <div class="footer-content">
+                <div class="contact-info">
+                    <a href="contact.html">Contacts</a>
+                </div>
+                <div class="social-media" >
+                    <a href="https://www.facebook.com" target="_blank" style="font-size: 20px;">Instagram</a>
+                    <a href="https://www.twitter.com" target="_blank" style="font-size: 20px;" >TikTok</a>
+                    <a href="https://www.linkedin.com" target="_blank" style="font-size: 20px;">Facebook</a>
+                </div>
+                <div class="copyright">
+                    <p style="font-size: 12px;">&copy; 2024 HumanDesire. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- <script>
+            function toggleMenu() {
+                const navMenu = document.getElementById('nav-menu');
+                navMenu.classList.toggle('active');
+            }
+    
+            function validateForm() {
+                const form = document.forms["apply_to_sell"];
+                const feedback = document.getElementById('feedback');
+                feedback.innerHTML = '';
+    
+                if (!form["firstName"].value) {
+                    feedback.innerHTML += "<p>Please enter first name.</p>";
+                    return false;
+                }
+                if (!form["lastName"].value) {
+                    feedback.innerHTML += "<p>Please enter last name.</p>";
+                    return false;
+                }
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                emailError.textContent = 'Invalid email address.';
+                valid = false;
+            }
+                if (!form["phone"].value) {
+                    feedback.innerHTML += "<p>Please phone number.</p>";
+                    return false;
+                }
+                if (!form["region"].value) {
+                    feedback.innerHTML += "<p>Please select your region.</p>";
+                    return false;
+                }
+                if (!form["district"].value) {
+                    feedback.innerHTML += "<p>Please enter your district.</p>";
+                    return false;
+                }
+                if (!form["company"].value) {
+                    feedback.innerHTML += "<p>Please enter company name.</p>";
+                    return false;
+                }
+                if (!form["categoryy"].value) {
+                    feedback.innerHTML += "<p>Please select your category.</p>";
+                    return false;
+                }
+                if (!form["business"].value) {
+                    feedback.innerHTML += "<p>Please tell us about your business.</p>";
+                    return false;
+                }
+                return true;
+            }
+    
+            document.getElementById('courseForm').addEventListener('submit', registerCourse);
+        </script>
+    </section> -->
+    
+</body>
+</html>
