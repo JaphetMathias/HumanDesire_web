@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <!-- <link rel="stylesheet" href="https://fonts.google.com/specimen/Quicksand?query=quick"> -->
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <link rel="icon" href="assets/img/hdscreen.png" type="image/jpg">
@@ -58,11 +58,127 @@
       font-size: 12px;
       color: #333; /* Text color */
     }
+
+    form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+        }
+
+        form label {
+            margin-bottom: 5px;
+            /* font-weight: bold; */
+        }
+
+        form select, form input[type="text"], form input[type="number"], form input[type="submit"] {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            background-image: linear-gradient(135deg, #6e8efb, #a777e3);
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background-image: linear-gradient(135deg, #a777e3, #6e8efb);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .feedback {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .section-content {
+            /* background-color: #f9f9f9; */
+            padding: 20px;
+            /* margin: 20px auto; */
+            margin-left: 20px;
+            margin-right: 20px;
+            border-radius: 8px;
+            /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+            max-width: 800px;
+        }
+
+        .section-content h1, .section-content h2 {
+            color: #333;
+        }
+
+        .section-content p {
+            color: #555;
+            line-height: 0.5;
+        }
+
+        footer {
+            background-color: #333;
+            color: #ffffff6b;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer .footer-content .social-media {
+            margin: 10px 0;
+        }
+
+        footer .footer-content .social-media a {
+            color: #49a8c0;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+
+        footer .footer-content .social-media a:hover {
+            color: #141128;
+        }
+
+        footer .footer-content .contact-info {
+            margin: 2px 0;
+        }
+
+        footer .footer-content .contact-info p {
+            margin: 5px 0;
+        }
+
+        footer .footer-content .copyright {
+            margin: 5px 0;
+        }
+     
+        .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar stays above other elements */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for better visibility */
+}
+ 
     </style>
 </head>
 
 <body>
     <br>
+    <br><br>
     <section style="margin-top: 20px;">
         <div style="margin: auto;margin-left: 50px;">
             <h1 id="h1">CONTACTS</h1>
@@ -82,7 +198,7 @@
                     <div class="text-container">
                         <p style="font-weight: bold;">Email.</p>
                         <p>Contact our team via email to get help.</p>
-                        <p style="color: #b974df;">              <a href="" style="color: #b974df; text-decoration: none;">contact@humandesiretz.com</a></p>
+                        <p style="color: #b974df;">              <a href="" style="color: #b974df; text-decoration: none;">contact@humandesiretz.store</a></p>
                       </div>
                     <br>
                     <div class="circle">
@@ -104,15 +220,84 @@
                       </div>
                       <br>
                 </div>
+                <br>
+                <div class="section-content">
+                    <p style="font-weight: bold; padding-left: 24px;">Get in Touch</p>
+                    <p style="padding-left: 24px;">Fill in the form to start a conversation</p>
+                
+                    <form id="contactForm" onsubmit="sendMessage(event)">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" autocomplete="email" required>
+                
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" autocomplete="off" rows="5" required></textarea>
+                        <br>
+                
+                        <button type="submit" style="height: 50px; color: #a777e3; border: 0;">Send Message</button>
+                    </form>
+                
+                    <p id="messageBox" style="color: green; font-weight: bold;"></p>
+                </div>
             </div>
         </div>
     </section>
-    <section style="padding-top: 30px;">
-        <div id="box-finish2" style="padding-top: 50px;">
-            <p style="text-align: center;font-size: 16px;color: var(--bs-body-bg);"><br>©2025 HumanDesire<br><br></p>
+    <br><br><br>
+   <div style="padding-bottom: 30rem;"></div>
+   <footer>
+    <div class="footer-content">
+        <div class="contact-info">
+            <p style="color: white;">Contacts</p>
+            <!-- <a href="contacts.html" style="color: white;">Contacts</a> -->
         </div>
-    </section>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <div class="social-media">
+            <a href="https://www.instagram.com/humandesire_tz?igsh=ZGUzMzM3NWJiOQ==" target="Instagram">Instagram</a>
+            <a href="https://www.tiktok.com/@humandesire_tz?_t=8pqylfOPEUn&_r=1" target="TikTok">TikTok</a>
+            <a href="https://www.instagram.com/humandesire_tz?igsh=ZGUzMzM3NWJiOQ==" target="FaceBook">FaceBook</a>
+            <a href="https://www.linkedin.com" target="Youtube">Youtube</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 HumanDesire. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- JavaScript for Handling Form Submission -->
+<script>
+ function sendMessage(event) {
+    event.preventDefault(); // Prevent form from reloading
+
+    let form = document.getElementById("contactForm");
+    let formData = new FormData(form);
+
+    fetch("send_email2.php", {
+        method: "POST",
+        body: new URLSearchParams(formData),
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        }
+    })
+    .then(response => response.json()) // Ensure JSON response
+    .then(data => {
+        let messageBox = document.getElementById("messageBox");
+        
+        messageBox.innerText = data.message;
+        messageBox.style.color = data.status === "success" ? "green" : "red";
+
+        if (data.status === "success") {
+            form.reset(); // Clear input fields on success
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        document.getElementById("messageBox").innerText = "An error occurred. Please try again.";
+        document.getElementById("messageBox").style.color = "red";
+    });
+}
+</script>
 </body>
 
 </html>
