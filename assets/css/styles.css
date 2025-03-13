@@ -299,7 +299,7 @@ h4 {
 
 #promo2 {
   width: 100%;
-  background: url("../../assets/img/image15.jpeg") center / cover no-repeat;
+  background: url("../../assets/img/image142.png") center / cover no-repeat;
   height: 300px;
   animation: slideInTop 2s ease-out;
 }
@@ -307,7 +307,7 @@ h4 {
 @media (min-width: 768px) {
   #promo2 {
     width: 100%;
-    background: url("../../assets/img/image15.jpeg") center / cover no-repeat;
+    background: url("../../assets/img/image142.png") center / cover no-repeat;
     height: 600px;
     animation: slideInTop 2s ease-out;
   }
@@ -515,7 +515,7 @@ h4 {
 
 #promo-up {
   width: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/img/image14.jpeg") center / cover no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/img/juuselld.png") center / cover no-repeat;
   height: 500px;
   animation: slideInTop 2s ease-out;
 }
@@ -523,7 +523,7 @@ h4 {
 @media (min-width: 768px) {
   #promo-up {
     width: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/img/image14.jpeg") center / cover no-repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/img/selljuuu.png") center / cover no-repeat;
     height: 500px;
     animation: slideInTop 2s ease-out;
   }

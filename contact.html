@@ -239,7 +239,7 @@
                         <button type="submit" style="height: 50px; color: #a777e3; border: 0;">Send Message</button>
                     </form>
                 
-                    <p id="messageBox" style="color: green; font-weight: bold;"></p>
+                    <p id="messageBox" style="color: green; font-weight: bold; line-height: 18px;"></p>
                 </div>
             </div>
         </div>
@@ -293,7 +293,7 @@
     })
     .catch(error => {
         console.error("Error:", error);
-        document.getElementById("messageBox").innerText = "An error occurred. Please try again.";
+        document.getElementById("messageBox").innerText = "An error occurred. Please try again. Or Send us an message by using the email above";
         document.getElementById("messageBox").style.color = "red";
     });
 }

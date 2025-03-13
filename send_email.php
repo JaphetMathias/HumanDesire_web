@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->send();
         echo json_encode(["success" => true, "message" => "Thank you for messaging us. We will reply to you soon."]);
     } catch (Exception $e) {
-        echo json_encode(["success" => false, "message" => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"]);
+        echo json_encode(["success" => false, "message" => "Message could not be sent. Mailer Error: {$mail->ErrorInfo} , Or try to send us message by using the above Email"]);
     }
 } else {
     echo json_encode(["success" => false, "message" => "Invalid request."]);
